@@ -102,7 +102,7 @@ beta_kernel=(${stable_kernel[@]})
 auto_kernel="true"
 
 # Initialize the build device
-make_board="all"
+make_board="emb3531"
 
 # Set OpenWrt firmware size (Unit: MiB, boot_mb >= 256, root_mb >= 512)
 boot_mb="256"
@@ -285,13 +285,12 @@ check_data() {
     [[ "${#make_openwrt[@]}" -eq "0" ]] && error_msg "The board is missing, stop making."
 
     # Get a list of kernel
-#    kernel_from=($(
-#        cat ${model_conf} |
-#            sed -e 's/NA//g' -e 's/NULL//g' -e 's/[ ][ ]*//g' |
-#            grep -E "^[^#].*${board_list}$" | awk -F':' '{print $9}' |
-#            sort -u | xargs
-#    ))
-    kernel_from=("stable")
+    kernel_from=($(
+        cat ${model_conf} |
+            sed -e 's/NA//g' -e 's/NULL//g' -e 's/[ ][ ]*//g' |
+            grep -E "^[^#].*${board_list}$" | awk -F':' '{print $9}' |
+            sort -u | xargs
+    ))
     [[ "${#kernel_from[@]}" -eq "0" ]] && error_msg "Missing [ KERNEL_TAGS ] settings, stop building."
     # Replace custom kernel tags
     [[ -n "${kernel_usage}" ]] && {
