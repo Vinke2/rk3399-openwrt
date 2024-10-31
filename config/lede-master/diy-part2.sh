@@ -40,7 +40,7 @@ git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 # Add linkease-istore
 git clone https://github.com/linkease/istore.git package/istore
 # Add nas-packages-luci
-git clone https://github.com/linkease/nas-packages.git package/nas
+git clone https://github.com/Vinke2/nas-packages.git;master package/nas
 git clone https://github.com/linkease/nas-packages-luci.git package/nas_luci
 #
 # Apply patch
