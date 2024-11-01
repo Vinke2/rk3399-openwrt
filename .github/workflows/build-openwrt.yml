@@ -15,7 +15,7 @@ on:
         default: "lede-master"
         type: choice
         options:
-          - openwrt-openwrt-23.05
+          - openwrt-v23.05.5
           - lede-master
           - immortalwrt-master
       openwrt_board:
