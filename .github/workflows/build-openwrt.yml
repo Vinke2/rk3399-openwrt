@@ -97,6 +97,7 @@ on:
           - ophub
           - angel
           - Lemon1151
+          - Vinke2
 
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
