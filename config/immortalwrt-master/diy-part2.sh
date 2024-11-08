@@ -27,8 +27,8 @@ rm -rf package/luci-app-amlogic
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 
 
-rm -rf package/kernel/rtl88x2bu-cl
-git clone https://github.com/mirobiala/rtl88x2bu-cl package/kernel/rtl88x2bu-cl
+#rm -rf package/kernel/rtl88x2bu-cl
+#git clone https://github.com/mirobiala/rtl88x2bu-cl package/kernel/rtl88x2bu-cl
 
 #
 # Apply patch
